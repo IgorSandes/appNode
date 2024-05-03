@@ -1,0 +1,65 @@
+/* Estilo para o corpo do documento */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo para o cabeçalho */
+.cabecalho {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.logo {
+    margin: 0;
+}
+
+.cabecalho button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+/* Estilo para o conteúdo */
+.corpo {
+    margin: 20px auto;
+    max-width: 800px;
+    padding: 0 20px;
+}
+
+.conteudo {
+    margin-bottom: 20px;
+}
+
+/* Estilo para as tabelas */
+.tabela {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tabela td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+.tabela tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Estilo para o rodapé */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
