@@ -9,13 +9,14 @@
 <body>
     <header class="cabecalho">
         <h1 class="logo">AppNode</h1>
-        <button id="pesquisar">Pesquisar</button>
+        <button id="pesquisar" onclick="pesquisar()">Pesquisar</button>
     </header>
     <main class="corpo">
         <section>
             <section class="conteudo">
                 <div>
-                    <table class="tabela">
+                    <h2>Retorno Api</h2>
+                    <table id="tabela" class="tabela">
                         <tr>
                             <td>Id</td>
                             <td>Nome</td>
@@ -32,7 +33,8 @@
             </section>
             <section class="conteudo">
                 <div>
-                    <table class="tabela">
+                    <h2>Retono CSV</h2>
+                    <table id="tabela2" class="tabela">
                         <tr>
                             <td>Id</td>
                             <td>Nome</td>
@@ -41,15 +43,9 @@
                             <td>Número</td>
                             <td>Avatar</td>
                         </tr>
-                        <tr>
-                            <td>Linha 1, Coluna 1</td>
-                            <td>Linha 1, Coluna 2</td>
-                            <td>Linha 1, Coluna 3</td>
-                            <td>Linha 1, Coluna 4</td>
-                            <td>Linha 1, Coluna 5</td>
-                            <td>Linha 1, Coluna 6</td>
+                        <tr id="corpo-tabela2">
+
                         </tr>
-                        <h2>script retono do CSV</h2>
                     </table>
                 </div>
             </section>
@@ -62,6 +58,7 @@
 
     </footer>
 
-    <script type="module" src="./src/eventos.js"></script>
+    <script type="module" src="./src/front.js"></script>
+    <script src="./src/eventos.js"></script>
 </body>
 </html>
