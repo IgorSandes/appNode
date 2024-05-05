@@ -1,24 +1,13 @@
-let dadosTemp;
+import { lerDadosTemp } from "./manipudacaoDados.js"; 
+const dadosTemp = lerDadosTemp();
 
-async function lerDadosTemp() {
-    try {
-        const response = await fetch('./arquivoDadosTemp.json');
-        if (!response.ok) {
-            throw new Error('Erro ao ler o arquivo');
-        }
-        dadosTemp = await response.json();
-    } catch (err) {
-        console.error('Erro ao ler o arquivo:', err);
-        return;
-    }
-}
-
-function criarTabelaApi() {
+async function criarTabelaApi() {
+    console.log(dadosTemp)
     let tabela = document.getElementById("tabela");
-    if (!dadosTemp) {
-        console.error('Os dados temporários não foram carregados.');
-        return;
-    }
+    // if (!dadosTemp) {
+    //     console.error('Os dados temporários não foram carregados.');
+    //     return;
+    // }
 
     dadosTemp.forEach((linha) => {
         tabela.innerHTML += `
@@ -72,6 +61,6 @@ async function criarTabelaEspelhoCsv() {
 
 lerDadosTemp()
     .then(criarTabelaApi)
-    .then(lerDadosEspelhoCsv)
-    .then(criarTabelaEspelhoCsv)
-    .catch((err) => console.error('Erro:', err));
+//     .then(lerDadosEspelhoCsv)
+//     .then(criarTabelaEspelhoCsv)
+//     .catch((err) => console.error('Erro:', err));
