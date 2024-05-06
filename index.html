@@ -3,64 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AppNode</title>
+    <title>Gerenciamento de Usuários</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="cabecalho">
-        <h1 class="logo">AppNode</h1>
-        <button id="pesquisar" onclick="pesquisar()">Pesquisar</button>
-        <button>Salvar Base de Dados CSV</button>
+    <header id="cabecalho">
+        <h1 id="titulo">AppNode de Gerenciamento de Usuários</h1>
     </header>
-    <main class="corpo">
+    <div class="botoes">
+        <button id="save-btn">Salvar Dados</button>
+        <button id="pesquisar">Pesquisar Mais Dados</button>
+    </div>
+    <main>
         <section>
-            <section class="conteudo">
-                <div>
-                    <h2>Retorno Api</h2>
-                    <table id="tabela" class="tabela">
-                        <tr>
-                            <td>Id</td>
-                            <td>Nome</td>
-                            <td>Sobrenome</td>
-                            <td>Email</td>
-                            <td>Número</td>
-                            <td>Avatar</td>
-                        </tr>
-                        <tr id="corpo-tabela">
-                        </tr>
-
-                    </table>
-                </div>
-            </section>
-            <section class="conteudo">
-                <div>
-                    <h2>Retono CSV</h2>
-                    <table id="tabela2" class="tabela">
-                        <tr>
-                            <td>Id</td>
-                            <td>Nome</td>
-                            <td>Sobrenome</td>
-                            <td>Email</td>
-                            <td>Número</td>
-                            <td>Avatar</td>
-                        </tr>
-                        <tr id="corpo-tabela2">
-
-                        </tr>
-                    </table>
-                </div>
-            </section>
+            <hr>
+            <h2>Retorno Api</h2>
+            <div id="users-list"></div>
         </section>
         <section>
-            
-        </section>  
+            <hr>
+            <h2>Retorno CSV</h2>
+            <input type="text" id="buscar" name="buscar" placeholder="Buscar..." onkeyup="buscar()">
+            <div class="botoes">
+                <button id="deletar-btn">Deletar Usuário</button>
+                <!-- <button id="editar-btn">Editar Usuário</button> -->
+            </div>
+            <div id="users-list-csv"></div>
+        </section>
     </main>
     <footer>
-
+            © 2024 - AppNode Desenvolvido Por || Igor Sandes
     </footer>
-
-    <script type="module" src="./src/front.js"></script>
     <script src="./src/eventos.js"></script>
-    <script src="./src/manipudacaoDados.js"></script>
+    <script src="./src/buscar.js"></script>
 </body>
 </html>

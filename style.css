@@ -1,64 +1,124 @@
-/* Estilo para o corpo do documento */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-}
-/* Estilo para o cabeçalho */
-.cabecalho {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 20px 0;
+    background-color: #f8f9fa;
 }
 
-.logo {
+header {
+    background-color: #000000;
+    color: rgb(63, 179, 136);
+    padding: 20px;
+    text-align: center;
+}
+
+h1, h2 {
     margin: 0;
 }
 
-.cabecalho button {
-    background-color: #4CAF50; /* Green */
-    border: none;
-    color: white;
+button {
     padding: 10px 20px;
+    background-color: #17a2b8;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin: 0 5px;
+}
+
+button:hover {
+    background-color: #138496;
+}
+
+main {
     text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin-top: 10px;
+    padding: 20px;
 }
 
-/* Estilo para o conteúdo */
-.corpo {
-    margin: 20px auto;
-    max-width: 800px;
-    padding: 0 20px;
-}
-
-.conteudo {
+section {
     margin-bottom: 20px;
 }
 
-/* Estilo para as tabelas */
-.tabela {
-    width: 100%;
-    border-collapse: collapse;
+section > h2 {
+    margin-bottom: 10px;
 }
 
-.tabela td {
+#buscar {
+    background-color: transparent;
+    padding-left: 10px;
+    font-style: italic;
+    font-size: 18px;
+    border-radius: 10px;
+    height: 25px;
+    width: 85%;
+}
+
+.botoes {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+
+.botoes button {
+    padding: 10px 20px;
+    background-color: #17a2b8;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin: 0 5px;
+}
+
+.botoes button:hover {
+    background-color: #138496;
+}
+
+#users-list,
+#users-list-csv {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 20px;
+}
+
+.user-card,
+.user-card-csv {
+    background-color: white;
     border: 1px solid #ddd;
-    padding: 8px;
-    text-align: center;
+    border-radius: 5px;
+    padding: 15px;
 }
 
-.tabela tr:nth-child(even) {
-    background-color: #f2f2f2;
+.itens-csv, div {
+    margin: 5px;
 }
 
-/* Estilo para o rodapé */
 footer {
-    background-color: #333;
+    background-color: #343a40;
     color: white;
     text-align: center;
-    padding: 20px 0;
+    padding: 10px 0;
+}
+
+/* Mídia Query para telas menores */
+@media only screen and (max-width: 768px) {
+    #users-list,
+    #users-list-csv {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    #users-list,
+    #users-list-csv {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    #users-list,
+    #users-list-csv {
+        grid-template-columns: repeat(5, 1fr);
+    }
 }
